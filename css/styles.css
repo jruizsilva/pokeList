@@ -1,0 +1,85 @@
+html {
+	box-sizing: border-box;
+}
+* {
+	box-sizing: inherit;
+}
+body {
+	font-family: sans-serif;
+	background-color: #444444;
+}
+.spinner {
+	display: flex;
+	justify-content: center;
+}
+.spinner::after {
+	content: "";
+	display: block;
+	width: 45px;
+	height: 45px;
+	border: 2px solid #da0037;
+	border-left: transparent;
+	border-radius: 50%;
+	animation: girar 800ms linear;
+	animation-iteration-count: infinite;
+}
+@keyframes girar {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.header {
+	height: 64px;
+	background-color: #ededed;
+	color: #171717;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.header__title {
+	font-size: 24px;
+}
+.hidden {
+	visibility: hidden;
+}
+.nav {
+	width: 100px;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.nav__link {
+	text-decoration: none;
+}
+.nav__link[data-previous]::before {
+	font-family: "Material Icons";
+	content: "chevron_left";
+	font-size: 36px;
+	color: white;
+}
+.nav__link[data-next]::after {
+	font-family: "Material Icons";
+	content: "chevron_right";
+	font-size: 36px;
+	color: white;
+}
+main {
+	padding: 0 24px;
+	max-width: 1024px;
+	margin: auto;
+	margin-bottom: 24px;
+	color: #ededed;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	row-gap: 16px;
+	text-align: center;
+}
+.pokemon__name {
+	text-transform: capitalize;
+}

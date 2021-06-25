@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PokeList</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">PokeList</h1>
+		</header>
+		<nav class="nav">
+			<a href="#" class="nav__link hidden" data-previous></a>
+			<a href="#" class="nav__link hidden" data-next></a>
+		</nav>
+		<main></main>
+		<template id="templatePokemon">
+			<figure class="pokemon">
+				<img class="pokemon__image" />
+				<figcaption class="pokemon__name"></figcaption>
+			</figure>
+		</template>
+		<script src="js/app.js"></script>
+	</body>
+</html>
